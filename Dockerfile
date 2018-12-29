@@ -6,6 +6,7 @@ COPY ./ ./
 RUN ls
 RUN pwd
 CMD ["npm", "run" ,"build"] 
+RUN ls
 
 FROM nginx
 EXPOSE 80
