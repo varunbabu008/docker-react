@@ -6,6 +6,8 @@ COPY ./ ./
 RUN ls
 RUN pwd
 CMD ["npm", "run" ,"build"] 
+RUN mkdir varun
+RUN touch var
 RUN ls
 
 FROM nginx
