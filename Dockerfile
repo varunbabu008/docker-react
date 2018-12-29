@@ -9,7 +9,6 @@ CMD ["npm", "run" ,"build"]
 RUN mkdir varun
 RUN touch var
 RUN ls
-RUN cd node_modules && ls
 
 FROM nginx
 EXPOSE 80
