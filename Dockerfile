@@ -3,14 +3,10 @@ WORKDIR '/app'
 COPY package.json ./
 RUN npm install
 COPY ./ ./
-RUN ls
-RUN pwd
-CMD ["npm", "run" ,"build"] 
+RUN npm run build 
 RUN mkdir varun
 RUN touch var
-RUN ls
 
 FROM nginx
 EXPOSE 80
-RUN pwd
 COPY --from=builder ./app/build /usr/share/nginx/html 
